@@ -36,3 +36,8 @@ join film_actor
 using(actor_id)
 group by actor.actor_id
 order by count(actor.actor_id) desc limit 1)
+
+#8. Customers who spent more than the average payments(this refers to the average of all amount spent per each customer).
+select sum(amount) as total_paid, customer_id
+from payment group by customer_id;
+select avg(total_paisd
